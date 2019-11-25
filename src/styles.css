@@ -1,1 +1,25 @@
 /* You can add global styles to this file, and also import other style files */
+.container {
+    padding: 10px;
+}
+
+.cardDisplay {
+    border: 1px solid;
+}
+
+.cardStrap {
+    background: #574B9B;
+    text-align: center;
+    color: white;
+    font-weight: 500;  
+    cursor: pointer; 
+}
+
+.image-container {
+    width: 100%;
+    height: 220px;
+}
+
+.align-div {
+    text-align: center;
+}

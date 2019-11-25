@@ -18,6 +18,6 @@ export class HeaderComponent implements OnInit {
 
   public onBranchNameClick(categoryDetails: any) {
     this.categoryService.shareSelectedCategoryDetails(categoryDetails);
-    this.route.navigate(['category']);
+    this.route.navigate(['/category']);
   }
 }

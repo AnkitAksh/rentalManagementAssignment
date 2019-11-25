@@ -3,8 +3,8 @@
     <div class="row">
         <div class="col-12 col-lg-3 col-md-6 col-sm-12 pt-5" *ngFor="let category of selectedCategories.categories">
             <div class="cardDisplay">
-                <div>
-                    <img alt="Avatar" height="200" src="../../../assets/img/{{category.image}}"
+                <div class="align-div">
+                    <img alt="Avatar" class="image-container" src="../../../assets/img/{{category.image}}"
                         onerror="this.src='assets/img/subcategory/dummy.png'" width="200">
                     <div class="w-100 p-3 cardStrap" (click)="onCategoryClick(category)">
                         <span>{{category.name}}</span>
