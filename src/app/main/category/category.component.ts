@@ -1,6 +1,5 @@
 import { Component, OnInit } from '@angular/core';
 import { CategoryService } from '../service/category.service.js';
-import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-category',
@@ -11,7 +10,7 @@ export class CategoryComponent implements OnInit {
 
   selectedCategories: any;
 
-  constructor(private route: Router, private categoryService: CategoryService) { }
+  constructor(private categoryService: CategoryService) { }
 
   ngOnInit() {
     this.categoryService.currentCategory.subscribe(data => {
