@@ -7,7 +7,9 @@ import * as SampleJson from '../../../assets/catalog.json';
 })
 export class CategoryService {
 
-  private categoriesSource = new BehaviorSubject<any>('');
+  public subCategories: any;
+
+  public categoriesSource = new BehaviorSubject<any>('');
   currentCategory = this.categoriesSource.asObservable();
 
   constructor() { }
@@ -19,4 +21,5 @@ export class CategoryService {
   shareSelectedCategoryDetails(categories: any) {
     this.categoriesSource.next(categories);
   }
+
 }

@@ -1,1 +1,16 @@
-<p>category details</p>
+<div class="container">
+    <div style="padding-top: 20px; font-weight: bold;"><a [routerLink]="'/category'">Equipment Catelog</a> / {{categoryDetails.name}}</div>
+    <div class="row">
+        <div class="col-12 col-lg-3 col-md-6 col-sm-12 pt-5" *ngFor="let subCategory of categoryDetails.subcategories">
+            <div class="cardDisplay">
+                <div>
+                    <img alt="Avatar" height="200" src="../../../assets/img/subcategory/{{subCategory.image}}"
+                        onerror="this.src='assets/img/subcategory/dummy.png'" width="200">
+                    <div class="w-100 p-3 cardStrap" (click)="onCategoryClick(category)">
+                        <span>{{subCategory.name}}</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>

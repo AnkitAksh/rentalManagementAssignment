@@ -1,0 +1,14 @@
+.container {
+    padding: 10px;
+}
+
+.cardDisplay {
+    border: 1px solid;
+}
+
+.cardStrap {
+    background: #574B9B;
+    text-align: center;
+    color: white;
+    font-weight: 500;   
+}

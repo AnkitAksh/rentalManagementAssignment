@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Router, NavigationExtras } from '@angular/router';
 import { CategoryService } from '../service/category.service.js';
 
 @Component({
@@ -9,8 +10,9 @@ import { CategoryService } from '../service/category.service.js';
 export class CategoryComponent implements OnInit {
 
   selectedCategories: any;
+  selectedSubCategories: NavigationExtras;
 
-  constructor(private categoryService: CategoryService) { }
+  constructor(private route: Router, private categoryService: CategoryService) { }
 
   ngOnInit() {
     this.categoryService.currentCategory.subscribe(data => {
@@ -19,7 +21,8 @@ export class CategoryComponent implements OnInit {
   }
 
   public onCategoryClick(categoryDetails: any) {
-    this.categoryService.shareSelectedCategoryDetails(categoryDetails);
+    this.selectedSubCategories = categoryDetails;
+    this.route.navigate(['/categoryDetails'], this.selectedSubCategories);
   }
 
 }

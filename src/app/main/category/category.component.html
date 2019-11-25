@@ -7,7 +7,8 @@
                     <img alt="Avatar" height="200" src="../../../assets/img/{{category.image}}"
                         onerror="this.src='assets/img/subcategory/dummy.png'" width="200">
                     <div class="w-100 p-3 cardStrap" (click)="onCategoryClick(category)">
-                        {{category.name}}
+                        <span>{{category.name}}</span>
+                        <i class="fa fa-caret-right" style="padding-left: 25px"></i>
                     </div>
                 </div>
             </div>
